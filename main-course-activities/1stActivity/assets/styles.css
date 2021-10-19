@@ -1,0 +1,74 @@
+html {
+    font-size: 14px;
+}
+* {
+    color: rgb(29, 29, 29);
+}
+body {
+    background-color: white;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-family: 'Myriad Pro', sans-serif;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+}
+
+/*main content*/
+div #image {
+    background-color: rgb(39, 39, 39);
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+
+div #img-caption {
+    font-size: 14px;
+}
+
+#main {
+    margin: 50px;
+    margin-top: 0;
+}
+
+#title {
+    line-height: 2px;
+}
+
+#tribute-info {
+    line-height: 20px;
+}
+
+button {
+    background: transparent;
+    font-size: 14px;
+    height: 30px;
+    width: 120px;
+    border-radius: 20px;
+    border: 1px solid rgb(0, 0, 0);
+    outline: 0;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(29, 29, 29);
+    transition-duration: 0.35s;
+}
+
+button:hover a{
+    color: white;
+}
+
+button a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}

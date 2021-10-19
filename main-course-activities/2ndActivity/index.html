@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/2ndActivity/assets/styles.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Become a Software Engineer</p>
+        </header>
+        <form action="action_page.php" method="GET" id="survey-form">
+            <!--for name section-->
+            <div class="form-group">
+                <label for="name" id="name-label">Name:</label>
+                    <input 
+                    type="text" 
+                    placeholder="Enter your name" 
+                    name="name"
+                    id="name"
+                    class="form-control" 
+                    required>
+            </div>
+            <!--end for name section-->
+
+            <!--for email section-->
+            <div class="form-group">
+                <label for="email" id="email-label">Email:</label>
+                    <input 
+                    type="email" 
+                    placeholder="Enter your email" 
+                    name="email"
+                    id="email"
+                    class="form-control"  
+                    required>
+            </div>
+            <!--end for email section-->
+
+            <!--for type number section-->
+            <div class="form-group">
+                <label for="phone" id="number-label">Number:</label>
+                    <input 
+                    type="number"
+                    placeholder="Enter your phone number" 
+                    name="number" 
+                    id="number"
+                    class="form-control"
+                    min="4"
+                    max="12"
+                    required>
+            </div>
+            <!--end for type number section-->
+
+            <!--for address section-->
+            <div class="form-group">
+                <label for="address" id="address-label">Address: <span id="clue">(optional):</span> </label>
+                    <input 
+                    type="text"
+                    placeholder="Enter your Address" 
+                    class="form-control"
+                    name="address" 
+                    id="address"
+                    required>
+            </div>
+            <!--end for address section-->
+
+            <!--for role section-->
+            <div class="form-group">
+                <p id="quest" >Which option best describe your current role?</p>
+                    <select name="role" id="dropdown" required>
+                        <option value="" disabled selected value>Select current role</option>
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="job">Job</option>
+                        <option value="other">Other</option>
+                    </select>
+            </div>
+            <!--end for role section-->
+
+            <!--for radio section-->
+            <div class="form-group">
+                <p id="quest">How you know about Avion?</p>
+                <label for="" class="radio-label">
+                    <input 
+                    type="radio" 
+                    name="source"
+                    value="friends"
+                    class="inputRadio"
+                    checked>
+                    <span id="label-text">Friends</span>
+                </label>
+                <label for="" class="radio-label">
+                    <input 
+                    type="radio" 
+                    name="source"
+                    value="tv-ads" 
+                    class="inputRadio"
+                    checked>
+                    <span id="label-text">TV Ads</span>
+                </label>
+                <label for="" class="radio-label">
+                    <input 
+                    type="radio" 
+                    name="source"
+                    value="social-media"
+                    class="inputRadio"
+                    checked>
+                    <span id="label-text">Social Media</span>
+                </label>
+            </div>
+            <!--end for radio section-->
+
+            <!--for checkbox section-->
+            <div class="form-group">
+                <p id="quest">How you want to be after the course?</p>
+                    <label for="" class="checkbox-label">
+                        <input 
+                        type="checkbox" 
+                        name="prefer"
+                        value="back-end-dev">
+                        <span id="label-text">Back-end Developer</span>
+                    </label>
+                    <label for="" class="checkbox-label">
+                        <input 
+                        type="checkbox" 
+                        name="prefer"
+                        value="front-end-dev">
+                        <span id="label-text">Front-end Developer</span>
+                    </label>
+                    <label for="" class="checkbox-label">
+                        <input 
+                        type="checkbox" 
+                        name="prefer"
+                        value="app-dev">
+                        <span id="label-text">App Developer</span>
+                    </label>
+                    <label for="" class="checkbox-label">
+                        <input 
+                        type="checkbox" 
+                        name="prefer"
+                        value="soft-eng">
+                        <span id="label-text">Software Engineer</span>
+                    </label>
+                    <label for="" class="checkbox-label">
+                        <input 
+                        type="checkbox" 
+                        name="prefer"
+                        value="other">
+                        <span id="label-text">Other</span>
+                    </label>   
+            </div>
+            <!--end for checkbox section-->
+
+            <!--for textarea section-->
+            <div class="form-group">
+                <p id="quest">Any comments or suggestions?</p>
+                    <textarea 
+                    name="question" 
+                    id="question" 
+                    class="textarea"
+                    placeholder="Enter your comments/suggestions here...">
+                    </textarea>
+            </div>
+            <!--end for textarea section-->
+
+            <!--for submit button-->
+            <div class="form-group">
+                <button 
+                type="submit" 
+                id="submit" 
+                >Submit
+                </button>
+            </div>
+            <!--end for submit button-->
+
+        </form>
+        <footer>
+            All rights reserved.
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@mixin marginTopBottom {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+@mixin inputStyle {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}

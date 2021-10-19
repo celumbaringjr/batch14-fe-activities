@@ -1,0 +1,227 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(to right, rgb(43, 192, 228), rgb(234, 236, 198));
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Verdana", sans-serif;
+  font-size: 1rem;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  .title {
+    font-size: 1vw;
+    text-align: center;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+
+  .board {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1vw solid rgb(228, 228, 228);
+    background-image: url(/3rdActivity/images/glass-texture1.jpg);
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: 40vw;
+    height: 40vw;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+
+    .box-even {
+      width: 12.5%;
+      height: 12.5%;
+      background-color: rgba(151, 151, 151, 0.5);
+      font-size: 3vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .box-odd {
+      width: 12.5%;
+      height: 12.5%;
+      background-color: rgba(0, 0, 0, 0.4);
+      font-size: 3vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .box-even-black {
+      width: 12.5%;
+      height: 12.5%;
+      background-color: rgba(151, 151, 151, 0.5);
+      font-size: 3vw;
+      color: rgb(46, 46, 46);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .box-odd-black {
+      width: 12.5%;
+      height: 12.5%;
+      background-color: rgba(0, 0, 0, 0.4);
+      font-size: 3vw;
+      color: rgb(46, 46, 46);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+//Animation
+#pawn-black-1 {
+  animation: pawnBlack1 1s ease-in-out forwards;
+  animation-delay: 1.5s;
+
+  @keyframes pawnBlack1 {
+    0% {
+      z-index: 2;
+      transform: translateY(0);
+    }
+    100% {
+      z-index: 2;
+      transform: translateY(-245%);
+    }
+  }
+}
+
+#pawn-white-1 {
+  animation: pawnWhite1 1s forwards;
+  animation-delay: 3s;
+
+  @keyframes pawnWhite1 {
+    0% {
+      z-index: 2;
+      transform: translateY(0);
+    }
+
+    100% {
+      z-index: 2;
+      transform: translateY(115%);
+    }
+  }
+}
+
+#black-knight-right {
+  animation: blackKnight1 2s ease-in-out forwards;
+  animation-delay: 5s;
+
+  @keyframes blackKnight1 {
+    0% {
+      z-index: 2;
+      transform: translateY(0);
+    }
+
+    50% {
+      z-index: 2;
+      transform: translateY(-245%);
+    }
+
+    100% {
+      z-index: 2;
+      transform: translateX(-160%) translateY(-245%);
+    }
+  }
+}
+
+#white-knight-left {
+  animation: whiteKnight1 2s ease-in-out forwards;
+  animation-delay: 7s;
+
+  @keyframes whiteKnight1 {
+    0% {
+      z-index: 2;
+      transform: translateY(0);
+    }
+
+    50% {
+      z-index: 2;
+      transform: translateY(235%);
+    }
+
+    100% {
+      z-index: 2;
+      transform: translate(155%, 235%);
+    }
+  }
+}
+
+#pawn-black-4 {
+  animation: pawnBlack4 0.5s ease-in-out forwards;
+  animation-delay: 9s;
+
+  @keyframes pawnBlack4 {
+    0% {
+      z-index: 2;
+      transform: translateY(0);
+    }
+    100% {
+      z-index: 2;
+      transform: translateY(-125%);
+    }
+  }
+}
+
+#white-rook-left {
+  animation: whiteRook1 0.5s ease-in-out forwards;
+  animation-delay: 11s;
+
+  @keyframes whiteRook1 {
+    0% {
+      z-index: 2;
+      transform: translateX(0);
+    }
+
+    100% {
+      z-index: 2;
+      transform: translateX(155%);
+    }
+  }
+}
+
+#black-bishop-left {
+  animation: blackBishop1 2s ease-in-out forwards;
+  animation-delay: 13s;
+
+  @keyframes blackBishop1 {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translate(630%, -485%);
+      z-index: 2;
+    }
+  }
+}

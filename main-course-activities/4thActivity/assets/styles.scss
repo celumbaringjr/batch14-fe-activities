@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+//nav bar
+#header {
+  position: fixed;
+  display: flex;
+  top: 0;
+  align-items: center;
+  width: 100%;
+  min-height: 8vh;
+  padding: 0.5em;
+  background-color: #131313;
+  z-index: 2;
+}
+
+.logo {
+  flex: 1;
+
+  img {
+    margin-left: 5rem;
+    width: 150px;
+    height: auto;
+    /* filter: invert(27%) sepia(30%) saturate(378%) hue-rotate(157deg)
+      brightness(96%) contrast(93%); */
+  }
+}
+
+#nav-bar {
+  font-size: 1rem;
+  font-weight: 400;
+  width: 40vw;
+  margin: 0;
+  padding: 0;
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #e2e2e2;
+  }
+}
+
+//main container
+#container {
+  background: none;
+}
+
+.section-1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 2rem;
+  padding: 2rem;
+  border-bottom: 1px solid rgba(109, 109, 109, 0.6);
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #ffffff;
+
+  .info-image {
+    img {
+      width: 50vw;
+      display: block;
+      filter: drop-shadow(0px 10px 3px rgba(0, 0, 0, 0.3));
+    }
+  }
+
+  .highlight {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: rgb(255, 0, 51);
+  }
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 50vw;
+  min-height: 80vh;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+}
+
+#form {
+  .form-control {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 1.125rem;
+  }
+
+  #submit {
+    font-size: 1.125rem;
+    cursor: pointer;
+    width: 6vw;
+    height: 4vh;
+  }
+}
+
+input[type="email"] {
+  background: #fff;
+  width: 28vw;
+  height: 5vh;
+  outline: none;
+  padding-left: 1em;
+  border-radius: 2.5vh 2.5vh 2.5vh 2.5vh;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+
+  &:focus {
+    outline: none !important;
+    border: 2px solid #7c9ec7;
+  }
+}
+
+input[type="submit"] {
+  position: relative;
+  left: -6.4vw;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  width: 20vw;
+  height: 5vh;
+  outline: none;
+  border-radius: 2.5vh 2.5vh 2.5vh 2.5vh;
+  border: none;
+  outline: none;
+  transition: 0.15s ease-in-out;
+
+  &:hover {
+    background: #7c9ec7;
+  }
+}
+
+.section-2 {
+  margin: 2rem;
+  padding: 2rem;
+  max-width: 100vw;
+  min-height: 80vh;
+  border-bottom: 1px solid rgba(109, 109, 109, 0.6);
+
+  .about {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 2em;
+  }
+
+  .about-info {
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 40px;
+      margin: 2rem 25rem 0rem 25rem;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: #06c;
+    }
+      
+
+  }
+}
+
+.video-wrapper {
+  #video {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
+    height: auto;
+  }
+}
+
+.section-3 {
+  margin: 2rem;
+  padding: 2rem;
+  max-width: 100vw;
+  min-height: 45vh;
+  text-align: center;
+  border-bottom: 1px solid rgba(109, 109, 109, 0.6);
+
+  #features {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  .sub-info {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 40px;
+    color: #616161;
+  }
+
+  li {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 40px;
+    list-style: none;
+  }
+}
+
+.section-4 {
+  margin: 2rem;
+  padding: 2rem;
+  max-width: 100vw;
+  min-height: 45vh;
+  text-align: center;
+
+  #faq {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.faq-info {
+  margin: 0 2rem 2rem 2rem;
+  padding: 2rem;
+  max-width: 100vw;
+  min-height: 45vh;
+  text-align: center;
+
+  .accord-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 40px;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 40px;
+    margin: 2rem 25rem 2rem 25rem;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  max-width: 100%;
+  min-height: 5vh;
+  background-color: #131313;
+}

@@ -160,6 +160,7 @@ body {
 }
 
 .section-1 {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,8 +172,8 @@ body {
           align-items: center;
   max-width: 100vw;
   min-height: 100vh;
-  background: -webkit-gradient(linear, right top, left top, from(#7c9ec7), to(#cce1f5));
-  background: linear-gradient(to left, #7c9ec7, #cce1f5);
+  background: -webkit-gradient(linear, left top, left bottom, from(#7c9ec7), to(transparent));
+  background: linear-gradient(to bottom, #7c9ec7, transparent);
 }
 
 .section-1 .info-image img {
@@ -186,6 +187,15 @@ body {
   font-size: 1.25rem;
   font-weight: 400;
   color: #ff0033;
+}
+
+.section-1 .scroll {
+  position: absolute;
+  height: 50px;
+  width: 30px;
+  bottom: 30px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .info-text {
@@ -272,6 +282,65 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background: #9ebdd9;
+}
+
+.scroll-down {
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.scroll-down::before, .scroll-down::after {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 1px solid #8a8a8a;
+  height: 15px;
+  width: 15px;
+  -webkit-transform: translate(-50%, -100%) rotate(45deg);
+          transform: translate(-50%, -100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  -webkit-animation: scroll-down 1s ease-in-out infinite;
+          animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::after {
+  top: 30%;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 90%;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -384,6 +453,7 @@ input[type="submit"]:hover {
   padding: 2rem;
   max-width: 100vw;
   min-height: 80vh;
+  border-top: 1px solid rgba(109, 109, 109, 0.6);
   border-bottom: 1px solid rgba(109, 109, 109, 0.6);
 }
 

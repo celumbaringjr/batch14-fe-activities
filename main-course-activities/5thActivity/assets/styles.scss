@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url(/5thActivity/images/morning.jpg);
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+#nav-bar {
+  position: absolute;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  transform: translate(10%, 15%);
+  z-index: 1;
+  /* margin-top: 2rem;
+  margin-left: 3rem; */
+
+  ul {
+    padding: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+
+    img {
+      width: 40px;
+      height: auto;
+      filter: invert(100%) sepia(5%) saturate(0%) hue-rotate(312deg)
+        brightness(107%) contrast(104%);
+      opacity: 0.7;
+
+      &:hover {
+        opacity: 1;
+        transition-duration: 0.4s;
+      }
+    }
+  }
+}
+
+#main-container {
+  position: relative;
+}
+
+#sub-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  text-align: center;
+
+  .time {
+    font-size: 8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .greeting-container {
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+
+    #greeting {
+      font-weight: 400;
+      font-size: 2rem;
+    }
+
+    #name {
+      font-size: 2rem;
+    }
+
+    .focus-title {
+      font-weight: 200;
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    #focus {
+      border-bottom: 1.25px solid rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .quotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #fff;
+    width: 40vw;
+    height: 8vh;
+    padding: 0 2rem 0 2rem;
+    margin-top: 30%;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .btn-container {
+    position: absolute;
+    margin-top: 48%;
+  }
+  .add-btn {
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    width: 15vw;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .btn1 {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    color: black;
+
+    &:hover {
+      background-color: #4caf50;
+      color: #fff;
+    }
+  }
+
+  .btn2 {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    color: black;
+
+    &:hover {
+      background-color: #008cba;
+      color: white;
+    }
+  }
+
+  .add-quote-container {
+    position: absolute;
+    margin-top: 40%;
+
+    input[type="text"] {
+      visibility: visible;
+      font-size: 1rem;
+    }
+  }
+}
+
+input[type="text"] {
+  text-align: center;
+  background: transparent;
+  width: 25vw;
+  height: 5vh;
+  outline: none;
+  padding: 0 0.5em 0 0.5em;
+  border: none;
+  border-bottom: 1.25px solid rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #fff;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}

@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  padding: 10px;
+  background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%);
+}
+
+#todo-btn {
+  transform: translate(20%, 15%);
+  background: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+
+.todo-list img {
+  width: 50px;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(306deg)
+    brightness(103%) contrast(101%);
+}
+
+.todo-list img:hover {
+  width: 50px;
+}
+
+.modal {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  max-width: 20vw;
+  width: 100%;
+  transform: translate(5%, 5%) scale(0);
+  transition: 200ms ease-in-out;
+  /* margin: 1rem 0 0 1rem; */
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+#modal.active {
+  transform: translate(5%, 5%) scale(1);
+}
+
+.modal header {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  font-weight: 600;
+}
+.modal .inputField {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  height: 45px;
+}
+.inputField input {
+  text-align: left;
+  color: rgb(0, 0, 0);
+  width: 85%;
+  height: 100%;
+  outline: none;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  font-weight: 400;
+  padding-left: 15px;
+  transition: all 0.3s ease;
+}
+
+.inputField input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.inputField input:focus {
+  border-color: #42ee5ff8;
+}
+.inputField button {
+  width: 50px;
+  height: 100%;
+  border: none;
+  color: rgb(255, 255, 255);
+  margin-left: 5px;
+  font-size: 21px;
+  outline: none;
+  background: #42ee5ff8;
+  cursor: pointer;
+  border-radius: 3px;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.inputField button:hover {
+  background: #65ff7f;
+}
+
+.footer button:hover {
+  background: #f7a84e;
+}
+
+.inputField button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal .todoList {
+  max-height: 250px;
+  overflow-y: auto;
+}
+.todoList li {
+  position: relative;
+  list-style: none;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  border-radius: 3px;
+  padding: 10px 15px;
+  cursor: default;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.todoList li .icon {
+  position: absolute;
+  right: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #e74c3c;
+  width: 45px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.todoList li:hover .icon {
+  right: 0px;
+}
+.modal .footer {
+  color: #fff;
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer button {
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  margin-left: 5px;
+  background: #f1952a;
+  cursor: pointer;
+  user-select: none;
+  opacity: 0.6;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.footer button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}

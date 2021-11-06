@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/5thActivity/assets/styles.css" />
+    <link rel="stylesheet" href="/5thActivity/assets/todo.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Momentum App</title>
+  </head>
+  <!--   <body onload="start()"> -->
+  <body>
+    <main id="main-container">
+      <!-- to do list icon -->
+      <button data-modal-target="#modal" id="todo-btn">
+        <ul class="todo-list">
+          <img src="/5thActivity/images/to-do-list.png" />
+        </ul>
+      </button>
+      <!-- to do list modal -->
+      <div class="modal" id="modal">
+        <header class="modal-header">
+          Todo App
+          <span
+            ><button data-close-button class="close-button">
+              &times;
+            </button></span
+          >
+        </header>
+        <div class="inputField">
+          <input type="text" placeholder="Add your new todo" />
+          <button><i class="fas fa-plus"></i></button>
+        </div>
+        <ul class="todoList">
+          <!-- data are comes from local storage -->
+        </ul>
+        <div class="footer">
+          <span>You have <span class="pendingTasks"></span> pending tasks</span>
+          <button>Clear All</button>
+        </div>
+      </div>
+      <!-- end of to do list modal -->
+      <!-- end of to do list -->
+      <div id="sub-container">
+        <div class="time">
+          <span id="time-input"></span>
+        </div>
+        <div class="greeting-container">
+          <p>
+            <span id="greeting"></span>
+            <span id="name" contenteditable="true"></span><span>!</span>
+          </p>
+          <h6 class="focus-title">What is your focus for today?</h6>
+          <h5 id="focus" contenteditable="true"></h5>
+        </div>
+        <div class="quotes">
+          <p id="quotes-content" class="add-quote"></p>
+        </div>
+        <div class="add-quote-container">
+          <form autocomplete="off">
+            <input
+              type="text"
+              placeholder="Add new quote here"
+              name="quote"
+              id="input-quote"
+              class="form-control"
+              value=""
+              required
+            />
+          </form>
+        </div>
+        <div class="btn-container">
+          <button
+            onclick="displayData()"
+            for="quote"
+            type="button"
+            id="add-quote"
+            class="add-btn btn1"
+          >
+            Add Favotite Quote
+          </button>
+          <button
+            onclick="surpriseQuote();"
+            type="button"
+            id="random-quote"
+            class="add-btn btn2"
+          >
+            Surprise Quote
+          </button>
+        </div>
+      </div>
+      <div id="overlay"></div>
+    </main>
+
+    <script src="/5thActivity/js/time.js"></script>
+    <script src="/5thActivity/js/changebackground.js"></script>
+    <script src="/5thActivity/js/getnamefocus.js"></script>
+    <script src="/5thActivity/js/quotesgenerator.js"></script>
+    <script src="/5thActivity/js/todo.js"></script>
+    <script src="/5thActivity/js/modal.js"></script>
+  </body>
+</html>
